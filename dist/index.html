@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#030407" />
+    <meta
+      name="description"
+      content="Mritunjay Saini — Class 10 student, creative developer, robotics & IoT enthusiast. Interactive 3D WebGL portfolio."
+    />
+    <title>Mritunjay Saini — 3D Developer & Robotics Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-6sDOsiia.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-jcFCnWRX.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Fixed Navigation Bar -->
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="Mritunjay Home">
+          <img
+            class="brand-avatar"
+            src="/assets/portrait.jpg"
+            alt="Mritunjay Saini"
+            onerror="this.src='/assets/about-photo.png'"
+          />
+          <div class="brand-text">
+            <span class="brand-name">MRITUNJAY</span>
+            <span class="brand-sub">ROBOTICS • IoT • CODE</span>
+          </div>
+        </a>
+
+        <nav id="main-nav" aria-label="Main navigation">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#journey">Journey</a>
+          <a href="#github">GitHub</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <a href="#contact" class="btn primary small header-cta">Connect</a>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            ☰
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <!-- Hero Section: Prominent 3D Voxel Avatar -->
+        <section id="home" class="hero section">
+          <div class="hero-stage">
+            <canvas id="avatar-canvas" aria-label="Interactive 3D Voxel Avatar of Mritunjay"></canvas>
+            <img class="minecraft-avatar-reference" src="/assets/minecraft-avatar-sheet.png" alt="Mritunjay Minecraft avatar skin reference" />
+
+            <!-- Live HUD Overlays -->
+            <div class="stage-hud top-hud">
+              <div class="status-indicator">
+                <span class="hud-blink-dot green"></span>
+                <span>online</span>
+              </div>
+              <div class="outfit-switcher">
+                <span class="outfit-label">OUTFIT:</span>
+                <button class="outfit-btn" id="outfit-suit-btn" title="Formal suit with electric violet tie">Suit</button>
+                <button class="outfit-btn active" id="outfit-hoodie-btn" title="Cyber hoodie with neon green 'M' emblem">Cyber Hoodie</button>
+              </div>
+            </div>
+
+            <div id="avatar-tooltip" class="avatar-tooltip" role="tooltip">Hover any body part to interact</div>
+
+            <div class="stage-caption">
+              <span>CURSOR TRACKING ACTIVE • 60 FPS</span>
+              <span>CLICK HEAD • EYES • MOUTH • CHEST • HAND</span>
+            </div>
+          </div>
+
+          <div class="scroll-cue">
+            <span></span>
+            <small>EXPLORE PORTFOLIO SCROLL ↓</small>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section content-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">01 / ARCHITECTURE & PERSON</p>
+            <h2>Builder by curiosity.<br /><span>Maker by choice.</span></h2>
+            <p class="section-intro">
+              I am a Class 10 student passionate about creative coding, embedded electronics, robotics, and designing practical, sensor-driven systems that solve real problems.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-portrait-card reveal">
+              <div class="portrait-photo-frame">
+                <img
+                  src="/assets/portrait.jpg"
+                  alt="Mritunjay Saini portrait in formal suit"
+                  onerror="this.src='/assets/about-photo.png'"
+                />
+                <div class="portrait-badge">
+                  <span>MAKER PROFILE / 001</span>
+                </div>
+              </div>
+              <div class="portrait-meta">
+                <strong>Mritunjay Saini</strong>
+                <span>Class 10 Student • Aspiring Engineer</span>
+                <span class="location-tag">📍 India</span>
+              </div>
+            </div>
+
+            <div class="about-bio-column reveal">
+              <h3>Turning curiosity into demonstrable prototypes.</h3>
+              <p>
+                My journey began with curiosity about how software interacts with the physical world. Rather than only studying theoretical concepts, I learn by building: soldering circuits, writing non-blocking C++ for microcontrollers, calibrating ultrasonic sensors, and creating 3D WebGL interfaces.
+              </p>
+              <p>
+                Whether it's an ultrasonic radar sweep plotting distance targets or a smart greenhouse automating soil irrigation, I focus on understanding every layer from resistor to render loop.
+              </p>
+
+              <div class="about-stats-row">
+                <div class="stat-box">
+                  <strong>10th</strong>
+                  <span>Current Class</span>
+                </div>
+                <div class="stat-box">
+                  <strong>8+</strong>
+                  <span>Interactive Builds</span>
+                </div>
+                <div class="stat-box">
+                  <strong>IoT & 3D</strong>
+                  <span>Core Focus</span>
+                </div>
+                <div class="stat-box">
+                  <strong>100%</strong>
+                  <span>Hands-on Code</span>
+                </div>
+              </div>
+
+              <!-- Animated Neural Brain Core Visualizer -->
+              <div id="brain-visual-container" class="brain-host"></div>
+
+              <!-- Verified Education Card -->
+              <div class="education-card" id="education-card">
+                <span class="education-icon">🎓</span>
+                <div class="education-content">
+                  <div class="education-header">
+                    <strong>Secondary Education (Class 10)</strong>
+                    <span class="education-year">2026 Active</span>
+                  </div>
+                  <p>
+                    Currently pursuing Class 10 secondary school curriculum. Concurrently mastering algorithms, C/C++, Python, Arduino microcontroller programming, and WebGL frontend development through self-directed project engineering.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Interactive 3D Skills Section -->
+        <section id="skills" class="section content-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">02 / TECHNICAL ARSENAL</p>
+            <h2>Orbiting skills &<br /><span>applied technologies.</span></h2>
+            <p class="section-intro">
+              Explore the 3D celestial constellation below. Each floating orb represents a technology I work with. Drag to navigate, hover for instant intel, or click any orb to view practical application notes.
+            </p>
+          </div>
+
+          <div class="skills-stage-wrapper reveal">
+            <canvas id="skills-canvas" aria-label="Interactive 3D skills constellation"></canvas>
+            <div class="skills-hud-bar">
+              <span class="hud-blink-dot cyan"></span>
+              <span>CELESTIAL SKILL FIELD • DRAG & HOVER ORBS</span>
+            </div>
+            <div id="skills-tooltip" class="skills-tooltip" role="tooltip"></div>
+          </div>
+
+          <!-- Skill Category Tags -->
+          <div class="skills-tags-grid reveal" id="skills-tags-container"></div>
+        </section>
+
+        <!-- Projects Section (All 8 Detailed Interactive Builds) -->
+        <section id="projects" class="section content-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">03 / SELECTED ENGINEERING BUILDS</p>
+            <h2>Interactive prototypes &<br /><span>embedded experiments.</span></h2>
+            <p class="section-intro">
+              Click any project card to open its dedicated interactive laboratory view with real-time simulations, component bill of materials, circuit architecture, and operational principles.
+            </p>
+          </div>
+
+          <div class="projects-grid" id="projects-grid"></div>
+        </section>
+
+        <!-- Capabilities (What I Can Do) -->
+        <section id="capabilities" class="section content-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">04 / CORE CAPABILITIES</p>
+            <h2>What I bring<br /><span>to every project.</span></h2>
+            <p class="section-intro">
+              From low-level microcontroller firmware to high-performance 3D web visualizations, here are the capabilities and disciplines I practice.
+            </p>
+          </div>
+
+          <div class="capabilities-grid" id="capabilities-grid"></div>
+        </section>
+
+        <!-- Journey Section (Miniature 3D World & Landmarks) -->
+        <section id="journey" class="section content-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">05 / WORLD EXPLORER</p>
+            <h2>A 3D world of<br /><span>landmarks & milestones.</span></h2>
+            <p class="section-intro">
+              Explore a stylized miniature world featuring world landmarks (Taj Mahal, Pyramids, Eiffel Tower, Statue of Liberty, Great Wall) interconnected along my learning trajectory. Drag to rotate and zoom with the mouse wheel.
+            </p>
+          </div>
+
+          <div class="journey-layout">
+            <div class="world-stage-card reveal">
+              <canvas id="world-canvas" aria-label="Interactive 3D Miniature Globe"></canvas>
+              <div class="world-controls">
+                <button id="world-zoom-in" aria-label="Zoom in">+</button>
+                <button id="world-zoom-out" aria-label="Zoom out">−</button>
+                <button id="world-reset" class="reset-btn">Reset View</button>
+              </div>
+              <div class="world-legend">
+                <span>3D EARTH • WORLD LANDMARKS</span>
+                <small>DRAG TO ROTATE • SCROLL TO ZOOM</small>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- GitHub Section -->
+        <section id="github" class="section content-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">06 / OPEN SOURCE & REPOSITORIES</p>
+            <h2>GitHub activity &<br /><span>public codebases.</span></h2>
+            <p class="section-intro">
+              Verified public repositories and code contributions under public profile <code>mritunjay20</code>.
+            </p>
+          </div>
+
+          <div id="github-section-container" class="reveal"></div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section content-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">07 / CONTACT & SOCIALS</p>
+            <h2>Let's build something<br /><span>extraordinary together.</span></h2>
+            <p class="section-intro">
+              Reach out for robotics discussions, creative coding collaborations, or science exhibition feedback.
+            </p>
+          </div>
+
+          <div id="contact-form-container" class="reveal"></div>
+
+          <div class="socials-heading reveal">
+            <h3>Find me online</h3>
+            <p>Follow my projects, builds, and updates across these platforms.</p>
+          </div>
+
+          <div class="socials-grid reveal" id="socials-grid"></div>
+        </section>
+      </main>
+
+      <!-- Footer with Signature -->
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img class="footer-avatar" src="/assets/portrait.jpg" alt="Mritunjay" onerror="this.src='/assets/about-photo.png'" />
+            <div>
+              <strong>Mritunjay Saini</strong>
+              <span>Building ideas into real things with curiosity, code, and electronics.</span>
+            </div>
+          </div>
+
+          <div class="footer-signature-wrapper">
+            <span class="signature-tag">AUTHENTIC SIGNATURE REFERENCE</span>
+            <div class="signature-display">
+              <img
+                src="/assets/signature.png"
+                alt="Mritunjay Saini handwritten signature"
+                class="signature-img"
+                onerror="this.src='/assets/signature-reference.jpg'"
+              />
+              <span class="signature-printed">Mritunjay Saini</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© <span id="current-year"></span> Mritunjay Saini. All rights reserved.</span>
+          <span>CLASS 10 DEVELOPER • ROBOTICS & IoT PROTOTYPES</span>
+          <a href="#home" class="back-to-top">BACK TO TOP ↑</a>
+        </div>
+      </footer>
+
+      <!-- Modals and Toast Containers -->
+      <div id="toast" role="status" aria-live="polite"></div>
+      <div id="skill-detail-modal" class="detail-modal-backdrop"></div>
+      <div id="milestone-detail-modal" class="detail-modal-backdrop"></div>
+    </div>
+
+  </body>
+</html>
